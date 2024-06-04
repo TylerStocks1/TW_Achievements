@@ -9,7 +9,7 @@ async function scrapePlayerPoints(playerName) {
         await page.goto(`https://kog.tw/#p=players&player=${playerName}`);
 
         // Wait for the player points container to appear
-        await page.waitForSelector('ul.list-group.list-group-flush', {waituntil: 'load', timeout:60000});
+        await page.waitForSelector('ul.list-group.list-group-flush', { waitUntil: 'load', timeout: 60000 });
 
         // Extract player points from the profile
         const playerPoints = await page.evaluate(() => {

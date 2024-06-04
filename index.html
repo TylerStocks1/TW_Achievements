@@ -10,25 +10,32 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-light">
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
-            <a class="navbar-brand">Tee-Trophies</a>
-            <form id="playerForm" class="d-flex" role="search">
-                <input class="form-control me-2" type="text" id="playerName" name="playerName" placeholder="Search" aria-label="Search">
-                <button type="submit" class="btn btn-outline-success">Search</button>
-            </form>
+            <a class="navbar-brand" href="#">Tee-Trophies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form id="playerForm" class="d-flex ml-auto" role="search">
+                    <input class="form-control me-2" type="text" id="playerName" name="playerName" placeholder="Search" aria-label="Search">
+                    <button type="submit" class="btn btn-outline-success">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
-    <div id="playerPoints"></div>
-
-    <!-- Spinner Container -->
-    <div id="spinnerContainer" class="spinner-container d-none">
-        <div class="text-center">
-            <div class="spinner-grow" role="status">
-                <span class="visually-hidden">Loading...</span>
+    <div class="container mt-4">
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="text-center" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-            <div class="mt-3">Loading...</div>
+            <p>Loading...</p>
         </div>
+        <!-- Player Points Container -->
+        <div id="playerPoints" class="bg-secondary p-4 rounded mt-4"></div>
+
+        
     </div>
 
     <!-- Bootstrap JS (Optional) -->
